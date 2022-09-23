@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <!-- https://cdnjs.com/libraries/twitter-bootstrap/5.0.0-beta1 -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/css/bootstrap.min.css"
+    />
+
+    <!-- Icons: https://getbootstrap.com/docs/5.0/extend/icons/ -->
+    <!-- https://cdnjs.com/libraries/font-awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+    />
+
+    <title>Hello, world!</title>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Trick-01 Start -->
+      <!-- one important think this work base on 100vw if width 50% of div this centering div base of 100vw  centering div by mx-auto have a condition first width set of div then
+    mx-auto property work in bootstrap col-12 mean width: 100%; col-6 mean width: 50%; col set width-->
+      <div class="row my-2 bg-success">
+        <div class="col-6 mx-auto">
+          <img
+            class="img-fluid"
+            src="./image/mac.jpg"
+            width="500"
+            height="350"
+            alt=""
+          />
+        </div>
+      </div>
+      <!-- Trick-01 End -->
+
+      <!-- Trick-02 Start -->
+      <!-- if image centering in specify width then use mx-auto; d-block; class
+      inside image if image inside col-12 img will be center inside col-12 if image inside col-6 inside col-6 image will be center -->
+      <div class="row my-2 bg-success">
+        <div class="col-12 bg-dark">
+          <img
+            class="img-fluid mx-auto d-block"
+            src="./image/mac.jpg"
+            width="500"
+            height="350"
+            alt=""
+          />
+        </div>
+      </div>
+      <!-- Trick-02 End  -->
+
+      <!-- Trick-3 Start  -->
+      <div class="row my-2">
+        <!-- if text-align: center use in parent div then block & inline element go center inline element sit one after one -->
+        <div class="text-center bg-success py-3">
+          <!-- if div element no set width then text will cente inside 100% width div element default width 100% -->
+          <div class="my-2">enamul</div>
+          <!-- if div element set width:50% then text will center inside 50% width of width:100vw-->
+          <div class="bg-warning w-50 my-2">enamul</div>
+          <!-- if div element set width: 50% then text will center inside 50% width and set d-inline-block then div will be center width: 100vw -->
+          <div class="bg-info d-inline-block w-50 my-2">enamul</div>
+          <!-- if ul element set width:50% then text will center inside 50% width of width:100vw-->
+          <ul class="list-unstyled bg-light w-50 my-2">
+            <li>a</li>
+            <li>b</li>
+            <li>c</li>
+          </ul>
+          <!-- if ul element set width: 50% then text will center inside 50% width and set d-inline-block then ul will be center width: 100vw -->
+          <ul class="list-unstyled bg-light d-inline-block w-50 my-2">
+            <li>a</li>
+            <li>b</li>
+            <li>c</li>
+          </ul>
+          <!-- p tag is a block element so it's default width: 100% p tag will be
+          center width of 100%  -->
+          <p class="my-2">enamul</p>
+          <!--h1 tag is a block element so it's default width: 100% p tag will be
+          center width of 100%  -->
+          <h1 class="my-2">sarker</h1>
+          <!-- inline element will be center case it's sit inside div element. div element default width: 100% so it's will be center base on width: 100%  but multiple inline element sit one after one case inline element width is set base on content that means As much content as width -->
+          <span>hello world</span>
+          <a href="" class="link-info">one</a>
+          <a href="" class="link-info">two</a>
+          <a href="" class="link-info">three</a>
+        </div>
+      </div>
+      <!-- Trick-3 End  -->
+    </div>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+
+    <!-- https://cdnjs.com/libraries/popper.js/2.5.4 -->
+    <!-- <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.5.4/umd/popper.min.js"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/js/bootstrap.min.js"
+    ></script> -->
+
+    <!-- More: https://getbootstrap.com/docs/5.0/getting-started/introduction/ -->
+  </body>
+</html>
